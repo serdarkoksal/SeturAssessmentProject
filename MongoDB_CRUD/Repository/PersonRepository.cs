@@ -35,7 +35,7 @@ namespace Directory.Repository
             {
                 foreach (var item in person.contacts)
                 {
-                    item.ContactId = Guid.NewGuid().ToString();
+                    item.ContactId = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 24);
                     item.Id = person.Id;
                 }
             }
