@@ -25,7 +25,7 @@ namespace Directory.Controllers
             return Ok(contact.Id);
         }
         [HttpGet("{Konum}")]
-        public async Task<IActionResult> IsminiSerdarKoysun(string Konum)
+        public async Task<IActionResult> GetKonum(string Konum)
         {
             var person = await _contactService.GetByKonumListAsync(Konum).ConfigureAwait(false);
             if (person == null)
