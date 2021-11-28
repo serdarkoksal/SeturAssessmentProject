@@ -50,6 +50,7 @@ namespace Directory.Repository
         {
             var gg = _collection .Find(x => x.Konum ==Konum).ToListAsync().Result;
             return gg;
+
         }
     }
 }
